@@ -7,13 +7,13 @@
   btn.addEventListener('click', () => {
     const open = btn.getAttribute('aria-expanded') === 'true';
     btn.setAttribute('aria-expanded', String(!open));
-    document.body.classList.toggle('nav-open', !open);
+    nav.classList.toggle('open', !open);   // Viktig! Legg til/fjern .open på nav
   });
 
   nav.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'a') {
       btn.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-open');
+      nav.classList.remove('open');
     }
   });
 })();
