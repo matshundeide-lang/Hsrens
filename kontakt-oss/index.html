@@ -1,34 +1,79 @@
-<!doctype html><html lang="no"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kontakt oss – HS Rens & Vedlikehold</title>
-<link rel="stylesheet" href="/assets/css/styles.css">
-</head><body>
-<header class="header"><div class="container nav">
-  <a class="brand" href="/"><img src="/images/logo.jpg" alt="HS Rens & Vedlikehold" class="brand-logo"><div><h1>HS Rens & Vedlikehold</h1><small>Ren luft • Bergen & omegn</small></div></a>
-  <nav><button class="burger">☰</button><div class="menu" id="mainmenu">
-    <a href="/tjenester/">Tjenester</a><a href="/varmepumperens/">Varmepumperens</a><a href="/resultater/">Resultater</a><a href="/om-oss/">Om oss</a><a class="btn" href="/kontakt-oss/">Kontakt</a>
-  </div></nav>
-</div></header>
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt oss – HS Rens & Vedlikehold</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="/images/favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">HS Rens & Vedlikehold</a>
+    <nav class="nav">
+      <a href="/tjenester/">Tjenester</a>
+      <a href="/varmepumperens/">Varmepumperens</a>
+      <a href="/resultater/">Resultater</a>
+      <a href="/om-oss/">Om oss</a>
+      <a class="cta" href="/kontakt-oss/" aria-current="page">Kontakt</a>
+    </nav>
+  </header>
 
-<main class="section light"><div class="container">
-  <h2>Kontakt oss</h2>
-  <p>Ring oss på <a href="tel:+4700000000">+47 00 00 00 00</a> eller send forespørsel via skjemaet.</p>
+  <main class="wrap">
+    <h1>Kontakt oss</h1>
 
-  <form class="card mt-24" name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="kontakt">
-    <p style="display:none"><label>Ikke fyll ut: <input name="bot-field"></label></p>
-    <label>Navn<br><input type="text" name="navn" required></label><br><br>
-    <label>E-post<br><input type="email" name="epost" required></label><br><br>
-    <label>Telefon<br><input type="tel" name="telefon"></label><br><br>
-    <label>Melding<br><textarea name="melding" rows="6" required></textarea></label><br><br>
-    <button class="btn" type="submit">Send forespørsel</button>
-  </form>
-</div></main>
+    <div class="grid-2">
+      <!-- Kontaktinfo & kart -->
+      <section class="card">
+        <h2>HS Rens & Vedlikehold</h2>
+        <p><strong>Adresse:</strong> Rollandslia 221, 5115 Ulset</p>
+        <p><strong>Telefon:</strong> <a href="tel:+47 00000000">+47 00 00 00 00</a></p>
+        <p><strong>E-post:</strong> <a href="mailto:post@hsrens.no">post@hsrens.no</a></p>
 
-<footer class="footer"><div class="container cols">
-  <div><h3>HS Rens & Vedlikehold</h3><p>Ekspert på ventilasjonsrens og varmepumperens.</p></div>
-  <div><h4>Navigasjon</h4><p><a href="/">Forside</a><br><a href="/tjenester/">Tjenester</a><br><a href="/om-oss/">Om oss</a></p></div>
-  <div><h4>Serviceområde</h4><p>Bergen og omegn</p></div>
-</div></footer>
-<script src="/assets/js/main.js" defer></script>
-</body></html>
+        <div class="map-wrap" style="margin-top:1rem">
+          <iframe
+            title="Kart – HS Rens & Vedlikehold"
+            width="100%" height="320" style="border:0" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Rollandslia%20221,%205115%20Ulset&output=embed">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Netlify-skjema -->
+      <section class="card">
+        <h2>Forespørsel</h2>
+        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="kontakt" />
+          <p class="hidden">
+            <label>Ikke fyll ut: <input name="bot-field" /></label>
+          </p>
+          <p>
+            <label>Navn<br><input type="text" name="navn" required></label>
+          </p>
+          <p>
+            <label>E-post<br><input type="email" name="epost" required></label>
+          </p>
+          <p>
+            <label>Telefon<br><input type="tel" name="telefon" required></label>
+          </p>
+          <p>
+            <label>Melding<br><textarea name="melding" rows="6" required></textarea></label>
+          </p>
+          <p><button class="button" type="submit">Send forespørsel</button></p>
+        </form>
+        <p class="muted">Vi svarer som regel samme dag.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>Bergen og omegn</div>
+    <nav>
+      <a href="/">Forside</a>
+      <a href="/tjenester/">Tjenester</a>
+      <a href="/om-oss/">Om oss</a>
+    </nav>
+  </footer>
+</body>
+</html>
