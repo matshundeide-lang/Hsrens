@@ -4,14 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Om oss – HS Rens & Vedlikehold</title>
-  <meta name="description" content="Lokalt firma i Bergen som leverer rens av varmepumper og serviceavtaler for borettslag og næring.">
+  <meta name="description" content="Lokalt firma i Bergen som leverer ventilasjonsrens og varmepumperens – med gode rutiner, ryddighet og dokumentert resultat.">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .cols{display:grid;gap:16px}
+    @media(min-width:900px){.cols{grid-template-columns:1.2fr .8fr}}
+    .panel{background:#fff;border:1px solid #e6eef4;border-radius:12px;padding:16px}
+  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo"></a>
+    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
     <nav class="site-nav">
+      <a href="/tjenester/">Ventilasjonsrens</a>
       <a href="/varmepumperens/">Varmepumperens</a>
       <a href="/resultater/">Resultater</a>
       <a aria-current="page" href="/om-oss/">Om oss</a>
@@ -22,12 +28,24 @@
 
   <main class="container">
     <h1>Om oss</h1>
-    <p>Vi er et lokalt firma som brenner for ren luft og gode inneklima. Vi utfører rens av varmepumper i Bergen og omegn, med fokus på kvalitet, ryddighet og god kommunikasjon.</p>
-    <ul class="checklist">
-      <li>Ryddig prosess og dokumenterte resultater</li>
-      <li>Rask respons og enkle bestillinger</li>
-      <li>Serviceavtaler for borettslag, sameier og næring</li>
-    </ul>
+    <div class="cols">
+      <section class="panel">
+        <h2>Lokalt og ryddig</h2>
+        <p>Vi leverer ventilasjonsrens og varmepumperens i Bergen og omegn. Målet er trygge, pene og effektive anlegg – med kort responstid og tydelig dialog.</p>
+        <ul class="checklist">
+          <li>Dokumenterte resultater</li>
+          <li>Ryddig arbeidsprosess</li>
+          <li>Serviceavtaler for borettslag og næring</li>
+        </ul>
+        <p><a class="btn" href="/kontakt-oss/">Ta kontakt</a></p>
+      </section>
+      <aside class="panel">
+        <h2>Kontakt</h2>
+        <p><strong>Adresse:</strong> Rollandslia 221, 5115 Ulset</p>
+        <p><strong>Telefon:</strong> <a href="tel:+4792098742">+47 92 09 87 42</a></p>
+        <p><strong>E-post:</strong> <a href="mailto:post@hsrens.no">post@hsrens.no</a></p>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">
