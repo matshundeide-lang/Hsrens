@@ -94,3 +94,40 @@ body{
 .figure{background:#fff; border-radius:12px; box-shadow:var(--shadow); overflow:hidden}
 .figure img{width:100%; height:auto; display:block}
 .figure figcaption{padding:10px 12px; font-size:14px; color:var(--muted)}
+/* Header, meny, knapper, galleri — finpuss */
+.site-header {
+  display:flex; align-items:center; gap:1rem;
+  justify-content:space-between; padding:14px 16px;
+  position:sticky; top:0; background:#fff; z-index:50; border-bottom:1px solid #e5e7eb;
+}
+.site-header .logo img { height:80px; max-height:100px; width:auto; display:block; }
+.site-nav { display:flex; gap:1.2rem; flex-wrap:wrap; }
+.site-nav a { font-weight:600; color:#2d3748; text-decoration:none; }
+.site-nav a[aria-current="page"] { color:#0ea5a2; }
+.cta-phone { margin-left:auto; font-weight:700; text-decoration:none; background:#0ea5a2; color:#fff; padding:8px 12px; border-radius:8px; }
+
+.container { max-width:980px; margin:0 auto; padding:24px 16px; }
+.cards { display:grid; gap:16px; margin:24px 0; }
+@media (min-width:720px){ .cards { grid-template-columns:repeat(2,1fr); } }
+.card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+.btn { display:inline-block; background:#0ea5a2; color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700; }
+.btn:hover{ filter:brightness(0.95); }
+.btn-secondary { background:#e2e8f0; color:#111827; }
+
+.site-footer { background:#0f172a; color:#e2e8f0; text-align:center; padding:28px 16px; margin-top:40px; }
+.site-footer a { color:#e2e8f0; text-decoration:none; }
+.footer-brand { font-weight:800; font-size:1.1rem; margin-bottom:6px; }
+
+.contact-card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+.map-wrap { margin-top:12px; border-radius:12px; overflow:hidden; }
+
+.gallery { display:grid; gap:18px; margin-top:20px; }
+.before-after { background:#fff; border-radius:16px; padding:12px; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+.before-after img { width:100%; display:block; border-radius:10px; }
+.before-after img + img { margin-top:8px; }
+.before-after figcaption { margin-top:6px; font-size:.95rem; color:#334155; }
+@media (min-width:720px){
+  .before-after { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .before-after img + img { margin-top:0; }
+  .before-after figcaption { grid-column:1 / -1; }
+}
