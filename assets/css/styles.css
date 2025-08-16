@@ -29,7 +29,7 @@ body{
 .logo{
   /* viser logo.png, skjuler link-tekst */
   display:inline-block; width:230px; height:48px;
-  background:url("/images/logo.png") left center / contain no-repeat;
+  background:url("/images/hs-02.png") left center / contain no-repeat;
   text-indent:-9999px; overflow:hidden; white-space:nowrap;
 }
 .nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
