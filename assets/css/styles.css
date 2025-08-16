@@ -131,3 +131,25 @@ body{
   .before-after img + img { margin-top:0; }
   .before-after figcaption { grid-column:1 / -1; }
 }
+/* Header / nav – justert logo litt større */
+.logo img { height: 44px; }
+
+/* Layout-hjelpere */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.hero .badge { display:inline-block; background:#e6f7f5; color:#0f8f84; padding:.35rem .6rem; border-radius:999px; font-weight:700; }
+.btn { display:inline-block; background:#11b3a3; color:#fff; padding:.8rem 1rem; border-radius:12px; text-decoration:none; }
+.btn-small { padding:.55rem .8rem; border-radius:10px; font-size:.95rem; }
+.cards { display:grid; gap:1rem; grid-template-columns:1fr; }
+.cards.two-cols { grid-template-columns:1fr; }
+.card { background:#fff; border-radius:16px; padding:1rem 1.2rem; box-shadow:0 10px 22px rgba(0,0,0,.06); }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+.gallery img { width:100%; height:auto; border-radius:12px; display:block; }
+.site-footer { background:#0f172a; color:#e6eaf2; margin-top:2rem; padding:1.2rem 0; }
+.site-footer a { color:#cdecec; }
+.footer-grid { display:grid; gap:1rem; grid-template-columns:1fr; align-items:center; }
+.small { font-size:.9rem; opacity:.8; padding-top:.4rem; border-top:1px solid rgba(255,255,255,.08); margin-top:.8rem; }
+@media (min-width: 740px){
+  .cards { grid-template-columns:repeat(3,1fr); }
+  .cards.two-cols { grid-template-columns:1fr 1fr; }
+  .footer-grid { grid-template-columns:2fr 1.2fr auto; }
+}
