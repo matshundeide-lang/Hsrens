@@ -4,14 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Resultater – Før & Etter | HS Rens & Vedlikehold</title>
-  <meta name="description" content="Se før- og etterbilder fra arbeid utført av HS Rens & Vedlikehold.">
+  <meta name="description" content="Se før- og etterbilder fra ventilasjonsrens og varmepumperens utført av HS Rens & Vedlikehold.">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .gallery{display:grid;gap:16px}
+    @media(min-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    figure{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e6eef4}
+    figcaption{padding:10px 12px;color:#475569}
+    .pair{display:grid;gap:8px;padding:8px}
+    @media(min-width:720px){.pair{grid-template-columns:1fr 1fr}}
+    .pair img{width:100%;display:block;border-radius:8px}
+  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo"></a>
+    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
     <nav class="site-nav">
+      <a href="/tjenester/">Ventilasjonsrens</a>
       <a href="/varmepumperens/">Varmepumperens</a>
       <a aria-current="page" href="/resultater/">Resultater</a>
       <a href="/om-oss/">Om oss</a>
@@ -21,30 +31,32 @@
   </header>
 
   <main class="container">
-    <h1>Resultater – Før & etter</h1>
-    <p>Se hva en skikkelig rens gjør. Legg egne bilder i <code>/images</code> og oppdater filnavnene under.</p>
+    <h1>Før & etter</h1>
+    <p>Legg dine bilder i <code>/images/</code> og bytt filnavn under.</p>
 
     <div class="gallery">
-      <figure class="before-after">
-        <img src="/images/for-1.jpg" alt="Før rens – kanal">
-        <img src="/images/etter-1.jpg" alt="Etter rens – kanal">
-        <figcaption>Kanal før og etter rens</figcaption>
+      <!-- Sett 1 -->
+      <figure>
+        <div class="pair">
+          <img src="/images/for-1.jpg"  alt="Før rens – kanal">
+          <img src="/images/etter-1.jpg" alt="Etter rens – kanal">
+        </div>
+        <figcaption>Kanal – før og etter rens</figcaption>
       </figure>
 
-      <figure class="before-after">
-        <img src="/images/for-2.jpg" alt="Før rens – varmepumpe">
-        <img src="/images/etter-2.jpg" alt="Etter rens – varmepumpe">
-        <figcaption>Varmepumpe før og etter</figcaption>
+      <!-- Sett 2 -->
+      <figure>
+        <div class="pair">
+          <img src="/images/for-2.jpg"  alt="Før rens – varmepumpe">
+          <img src="/images/etter-2.jpg" alt="Etter rens – varmepumpe">
+        </div>
+        <figcaption>Varmepumpe – før og etter</figcaption>
       </figure>
 
-      <!-- Kopier blokka for flere sett:
-      <figure class="before-after">
-        <img src="/images/for-3.jpg" alt="Før">
-        <img src="/images/etter-3.jpg" alt="Etter">
-        <figcaption>Beskrivelse</figcaption>
-      </figure>
-      -->
+      <!-- Kopier blokken over for flere sett -->
     </div>
+
+    <p style="margin-top:16px"><a class="btn" href="/kontakt-oss/">Be om tilbud</a></p>
   </main>
 
   <footer class="site-footer">
