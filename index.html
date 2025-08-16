@@ -3,16 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HS Rens & Vedlikehold</title>
-  <meta name="description" content="Profesjonell rens av varmepumper i Bergen og omegn. Kampanjepris 1 399,-. Serviceavtaler for borettslag, sameier og næring.">
+  <title>HS Rens & Vedlikehold – Ventilasjonsrens i Bergen</title>
+  <meta name="description" content="HS Rens & Vedlikehold: Profesjonell rens av ventilasjonsanlegg og varmepumper i Bergen og omegn. Serviceavtaler for borettslag og næring. Kampanje varmepumperens 1 399,-.">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .hero   {padding:42px 16px; background:linear-gradient(180deg,#ecfeff,transparent)}
+    .badge  {display:inline-block; padding:6px 10px; border:1px solid #bff3f6; border-radius:999px; background:#f6ffff; color:#0b6c70; font-weight:700; font-size:13px}
+    .lead   {color:#475569; max-width:720px}
+    .features{display:grid; gap:10px; margin:14px 0}
+    @media(min-width:900px){ .features{grid-template-columns:repeat(3,1fr)} }
+    .feature{background:#fff;border-radius:12px;padding:14px;border:1px solid #e6eef4}
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo"></a>
+    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
     <nav class="site-nav">
+      <a href="/tjenester/">Ventilasjonsrens</a>
       <a href="/varmepumperens/">Varmepumperens</a>
       <a href="/resultater/">Resultater</a>
       <a href="/om-oss/">Om oss</a>
@@ -21,20 +30,37 @@
     <a class="cta-phone" href="tel:+4792098742">+47 92 09 87 42</a>
   </header>
 
-  <main class="container">
-    <h1>Ren luft – bedre inneklima</h1>
-    <p>Vi rengjør varmepumper og tilbyr serviceavtaler for borettslag, sameier og næring.</p>
+  <!-- Hero – Ventilasjonsrens først -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Bergen & omegn</span>
+      <h1>Ventilasjonsrens for bolig, borettslag og næring</h1>
+      <p class="lead">Vi renser kanaler, ventiler og avtrekk skikkelig – for bedre luft, mindre støv og trygg drift. Alltid før/etter-bilder.</p>
+      <p>
+        <a class="btn" href="/kontakt-oss/">Få tilbud</a>
+        <a class="btn btn-secondary" href="/tjenester/">Les om ventilasjonsrens</a>
+      </p>
 
+      <div class="features">
+        <div class="feature"><strong>Dokumentasjon</strong><br>Før/etter-bilder for hvert oppdrag</div>
+        <div class="feature"><strong>Ryddig</strong><br>Tildekking, utsug og opprydding</div>
+        <div class="feature"><strong>Forutsigbart</strong><br>Klare tider og fast pris/tilbud</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekundær: Kampanje varmepumpe -->
+  <main class="container">
     <section class="cards">
       <article class="card">
-        <h2>Kampanjepris</h2>
-        <p><strong>Varmepumperens kun 1 399,-</strong> inkl. mva. Få renere luft og bedre effekt.</p>
-        <p><a class="btn" href="tel:+4792098742">Bestill nå</a></p>
+        <h2>Varmepumperens – kampanje</h2>
+        <p><strong>Kun 1 399,-</strong> inkl. mva for innedel. Renere luft, høyere effekt og mindre lukt.</p>
+        <p><a class="btn" href="/varmepumperens/">Se detaljer</a> <a class="btn btn-secondary" href="tel:+4792098742">Ring oss</a></p>
       </article>
 
       <article class="card">
         <h2>Serviceavtaler</h2>
-        <p>Årlige serviceavtaler for <strong>borettslag, sameier og næring</strong>. Fast pris per enhet og enkel dokumentasjon.</p>
+        <p>Årlige serviceavtaler for <strong>borettslag, sameier og næring</strong>. Fast pris per enhet, plan og rapport hvert år.</p>
         <p><a class="btn btn-secondary" href="/kontakt-oss/">Få tilbud</a></p>
       </article>
     </section>
