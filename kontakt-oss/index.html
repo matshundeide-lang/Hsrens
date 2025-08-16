@@ -1,52 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt oss – HS Rens & Vedlikehold</title>
-  <meta name="description" content="Kontakt HS Rens & Vedlikehold. Vi tilbyr ventilasjonsrens, varmepumperens og serviceavtaler for borettslag og næring.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
-    <nav class="site-nav">
-      <a href="/tjenester/">Ventilasjonsrens</a>
-      <a href="/varmepumperens/">Varmepumperens</a>
-      <a href="/resultater/">Resultater</a>
-      <a href="/om-oss/">Om oss</a>
-      <a aria-current="page" href="/kontakt-oss/">Kontakt oss</a>
-    </nav>
-    <a class="cta-phone" href="tel:+4792098742">+47 92 09 87 42</a>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="/ventilasjon/">Ventilasjonsrens</a>
+        <a href="/varmepumperens/">Varmepumperens</a>
+        <a href="/resultater/">Resultater</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakt-oss/">Kontakt oss</a>
+      </nav>
+      <div class="header-phone"><a href="tel:+4792098742">+47 92 09 87 42</a></div>
+    </div>
   </header>
 
-  <main class="container">
-    <h1>Kontakt oss</h1>
-
-    <section class="contact-card">
-      <h2>HS Rens & Vedlikehold</h2>
+  <main>
+    <section class="container">
+      <h1>Kontakt oss</h1>
+      <p><strong>HS Rens & Vedlikehold</strong></p>
       <p><strong>Adresse:</strong> Rollandslia 221, 5115 Ulset</p>
       <p><strong>Telefon:</strong> <a href="tel:+4792098742">+47 92 09 87 42</a></p>
       <p><strong>E-post:</strong> <a href="mailto:post@hsrens.no">post@hsrens.no</a></p>
-      <p class="muted">Vi tilbyr årlige serviceavtaler for borettslag, sameier og næring.</p>
 
-      <div class="map-wrap">
-        <iframe
-          title="HS Rens & Vedlikehold – kart"
-          width="100%" height="380" style="border:0" loading="lazy" allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Rollandslia%20221,%205115%20Ulset&hl=no&z=15&output=embed">
-        </iframe>
+      <form class="contact-form">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Melding:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send melding</button>
+      </form>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Rollandslia+221,+5115+Ulset&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand">HS Rens & Vedlikehold</div>
-    <div>Rollandslia 221, 5115 Ulset</div>
-    <div><a href="tel:+4792098742">+47 92 09 87 42</a> • <a href="mailto:post@hsrens.no">post@hsrens.no</a></div>
+    <div class="container">
+      <p><strong>HS Rens & Vedlikehold</strong><br>
+      Rollandslia 221, 5115 Ulset<br>
+      +47 92 09 87 42 · <a href="mailto:post@hsrens.no">post@hsrens.no</a></p>
+    </div>
   </footer>
 
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
