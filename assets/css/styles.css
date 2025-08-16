@@ -1,32 +1,24 @@
 /* =========================
    HS Rens & Vedlikehold
-   Global stilark
-   (lim ALT i denne filen)
+   Globalt stilark
    ========================= */
 
-/* ---------- Variabler / farger ---------- */
+/* ---------- Variabler ---------- */
 :root{
-  --brand:#00a7a0;        /* hovedfarge (teal) */
+  --brand:#00a7a0;
   --brand-dark:#008a84;
-  --brand-contrast:#ffffff;
-
-  --text:#0f172a;         /* nesten-svart */
-  --muted:#475569;        /* sekundær tekst */
-  --bg:#ffffff;           /* bakgrunn */
-  --bg-soft:#f1f5f9;      /* lys seksjonsbakgrunn */
-  --card:#ffffff;         /* kortbakgrunn */
-  --border:#e2e8f0;       /* linjer / grenser */
+  --text:#0f172a;
+  --muted:#475569;
+  --bg:#ffffff;
+  --bg-alt:#f6f8fb;
+  --border:#e2e8f0;
   --shadow:0 10px 25px rgba(15,23,42,.06);
-
   --radius:14px;
-  --radius-soft:12px;
-  --radius-pill:999px;
-
-  --max:1120px;           /* maks bredde innhold */
-  --pad:20px;             /* side-padding mobil */
+  --max:1120px;
+  --pad:20px;
 }
 
-/* ---------- Reset / base ---------- */
+/* ---------- Base ---------- */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -40,177 +32,101 @@ body{
 img{max-width:100%;height:auto;display:block}
 a{color:var(--brand-dark);text-decoration:none}
 a:hover{text-decoration:underline}
-h1,h2,h3{margin:0 0 .4em}
-h1{font-size:clamp(28px,5.2vw,44px);line-height:1.15}
-h2{font-size:clamp(22px,3.6vw,32px);line-height:1.2}
-h3{font-size:clamp(18px,2.8vw,22px)}
-p{margin:.6em 0}
-
-/* ---------- Hjelpeklasser ---------- */
+h1,h2,h3{margin:0 0 .5rem}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15}
+h2{font-size:clamp(22px,3.6vw,32px)}
+h3{font-size:clamp(18px,3vw,22px)}
+p{margin:.6rem 0}
 .container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
-.grid{display:grid;gap:24px}
 .section{padding:48px 0}
-.section.soft{background:var(--bg-soft)}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:24px;
-}
-.kicker{
-  display:inline-block;
-  background:rgba(0,167,160,.08);
-  color:var(--brand-dark);
-  border:1px solid rgba(0,167,160,.25);
-  padding:8px 14px;
-  border-radius:var(--radius-pill);
-  font-weight:600;
-  margin-bottom:14px;
-}
+.section.alt{background:var(--bg-alt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1rem;border-radius:12px;border:0;background:var(--brand);color:#fff;font-weight:800}
+.btn:hover{background:var(--brand-dark);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.pill{display:inline-block;background:var(--bg-alt);color:var(--brand-dark);border:1px solid var(--border);padding:.35rem .65rem;border-radius:999px;font-weight:600;margin-bottom:.6rem}
 
 /* ---------- Header / navigasjon ---------- */
 .site-header{
   position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.88);
+  background:rgba(255,255,255,.9);
   -webkit-backdrop-filter:saturate(180%) blur(14px);
   backdrop-filter:saturate(180%) blur(14px);
   border-bottom:1px solid rgba(226,232,240,.7);
 }
-.navbar{
+.header-inner{
   display:flex;align-items:center;justify-content:space-between;
   min-height:70px;
 }
+.brand img{height:40px;width:auto}           /* litt større logo */
+.nav-toggle{
+  display:none;appearance:none;background:none;border:0;cursor:pointer;
+  width:42px;height:42px;border-radius:10px;position:relative;
+}
+.nav-toggle .bar{display:block;position:absolute;left:10px;right:10px;height:2px;background:#0f172a;transition:.25s}
+.nav-toggle .bar:nth-child(1){top:14px}
+.nav-toggle .bar:nth-child(2){top:20px}
+.nav-toggle .bar:nth-child(3){top:26px}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-/* Logo – litt større */
-.logo{
-  display:flex;align-items:center;gap:12px;
-}
-.logo img{
-  height:36px;            /* øk hvis du vil ha enda større */
-  width:auto;
-}
-.logo .brand-name{
-  display:none;           /* vi viser kun merket på mobil for renere uttrykk */
-  font-weight:800;color:var(--text);letter-spacing:.2px
-}
-
-/* Desktop-nav */
-.nav-links{
-  display:flex;align-items:center;gap:26px;
+.main-nav ul{
+  display:flex;align-items:center;gap:26px;margin:0;padding:0;list-style:none;
   font-weight:600;
 }
-.nav-links a{color:#1f2937}
-.nav-links a:hover{color:var(--brand-dark)}
-.call-pill{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:10px 16px;border-radius:var(--radius-pill);
-  background:var(--brand);color:var(--brand-contrast);
-  font-weight:800;letter-spacing:.6px;
-}
-.call-pill:hover{background:var(--brand-dark);text-decoration:none}
+.main-nav a{color:#1f2937}
+.main-nav a:hover{color:var(--brand-dark)}
+.main-nav [aria-current="page"]{color:var(--brand-dark);text-decoration:underline}
+.main-nav .nav-phone a{color:#fff;background:var(--brand);padding:.55rem .8rem;border-radius:999px;font-weight:800}
+.main-nav .nav-phone a:hover{background:var(--brand-dark)}
 
-/* Burger (mobil) */
-.burger{
-  display:none;appearance:none;background:none;border:0;
-  width:40px;height:40px;border-radius:9px;
-  place-items:center;cursor:pointer;
-}
-.burger span,
-.burger::before,
-.burger::after{
-  content:"";display:block;height:2px;width:22px;
-  background:#0f172a;border-radius:3px;transition:.25s ease;
-}
-.burger::before{transform:translateY(-7px)}
-.burger::after{transform:translateY(7px)}
-/* aktiv tilstand (JS toggler .open på .burger) */
-.burger.open span{opacity:0}
-.burger.open::before{transform:translateY(0) rotate(45deg)}
-.burger.open::after{transform:translateY(0) rotate(-45deg)}
-
-/* Mobilpanel (JS toggler .open på .mobile-panel) */
-.mobile-panel{
-  position:fixed;inset:0 0 0 30%;
-  background:rgba(255,255,255,.96);
-  transform:translateX(100%);transition:transform .28s ease;
-  padding:24px;border-left:1px solid var(--border);
-  display:flex;flex-direction:column;gap:18px
-}
-.mobile-panel.open{transform:translateX(0)}
-.mobile-panel a{font-size:18px;color:var(--text);font-weight:700}
-.mobile-panel .call-pill{align-self:flex-start}
-
-/* ---------- Hero / hovedseksjon ---------- */
-.hero{padding:40px 0}
-.hero .lead{color:var(--muted);font-size:18px}
-
-/* ---------- Kort / tjenester ---------- */
-.service-list{display:grid;gap:20px}
-@media (min-width:720px){
-  .service-list{grid-template-columns:repeat(2,1fr)}
-}
-@media (min-width:980px){
-  .service-list{grid-template-columns:repeat(3,1fr)}
-}
-.service-card h3{margin-bottom:6px}
-.service-card p{color:var(--muted)}
-
-/* ---------- Resultat-galleri ---------- */
-.gallery{display:grid;gap:14px}
-@media (min-width:720px){.gallery{grid-template-columns:repeat(3,1fr)}}
-.gallery img{
-  border-radius:12px;border:1px solid var(--border);
-  box-shadow:var(--shadow)
+/* Mobilmeny */
+@media (max-width:860px){
+  .brand img{height:36px}
+  .nav-toggle{display:block}
+  .main-nav{
+    position:fixed;inset:70px 0 0 0;background:#fff;transform:translateY(-100%);
+    transition:transform .28s ease;border-top:1px solid var(--border);
+  }
+  .main-nav.open{transform:translateY(0)}
+  .main-nav ul{flex-direction:column;align-items:flex-start;gap:14px;padding:18px}
+  .main-nav .nav-phone a{display:inline-block}
 }
 
-/* ---------- Kontaktkort + kart ---------- */
-.contact-card .row{display:grid;gap:18px}
-@media (min-width:900px){.contact-card .row{grid-template-columns:1.1fr 1.4fr}}
-.map-embed{
-  min-height:380px;border:0;width:100%;
-  border-radius:12px;box-shadow:var(--shadow)
-}
+/* ---------- Kort / rader ---------- */
+.cards{display:grid;gap:18px;grid-template-columns:1fr}
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.grid-2{display:grid;gap:28px;grid-template-columns:1fr}
+@media(min-width:860px){.grid-2{grid-template-columns:1.1fr .9fr}}
+.check{list-style:none;padding:0;margin:1rem 0;display:grid;gap:8px}
+.check li::before{content:"✓";color:var(--brand);font-weight:900;margin-right:.5rem}
 
-/* ---------- Skjema ---------- */
-.form{
-  display:grid;gap:14px
-}
-.input, .textarea{
-  width:100%;padding:13px 14px;border-radius:10px;
-  border:1px solid var(--border);background:#fff;color:var(--text)
-}
-.textarea{min-height:120px;resize:vertical}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:12px 18px;border-radius:12px;border:0;cursor:pointer;
-  background:var(--brand);color:#fff;font-weight:800
-}
-.btn:hover{background:var(--brand-dark)}
+/* ---------- Galleri ---------- */
+.before-after,.gallery .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.before-after figure,.gallery .pair figure{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.before-after figcaption,.gallery figcaption{text-align:center;font-weight:700;padding:.4rem 0}
+.gallery{display:grid;gap:20px}
+
+/* ---------- Pris-boks ---------- */
+.pricebox{border:1px solid var(--border);border-radius:14px;padding:18px;background:#fff;box-shadow:var(--shadow)}
+.pricebox .price{font-size:2rem;font-weight:800;margin:.2rem 0 .3rem}
+.muted{color:var(--muted)}
+
+/* ---------- Skjema / kart ---------- */
+.form{display:grid;gap:12px}
+.form input,.form textarea{width:100%;border:1px solid var(--border);border-radius:10px;padding:.7rem .8rem}
+.form label{font-weight:600;display:grid;gap:6px}
+.form .hidden{display:none}
+.map iframe{width:100%;height:320px;border:0;border-radius:12px;box-shadow:var(--shadow)}
 
 /* ---------- Footer ---------- */
-.site-footer{
-  margin-top:46px;background:#0b1220;color:#e2e8f0;
-  padding:26px 0
-}
-.footer-grid{display:grid;gap:12px}
-.footer-brand{display:flex;align-items:center;gap:12px}
-.footer-brand img{height:28px;width:auto}
-
-/* ---------- Responsiv header: mobil < 860px ---------- */
-@media (max-width:860px){
-  .nav-links{display:none}
-  .burger{display:grid}
-  .logo img{height:34px}
-  .logo .brand-name{display:none}
-}
-
-/* ---------- Små justeringer ---------- */
-hr{border:0;border-top:1px solid var(--border);margin:24px 0}
-
-/* Gjem dobbel logo hvis noen ved et uhell har satt to i header */
-.header .logo + .logo{display:none}
-
-/* Nyttige margin-klasser */
-.mt-0{margin-top:0}.mt-1{margin-top:8px}.mt-2{margin-top:14px}.mt-3{margin-top:22px}.mt-4{margin-top:32px}
-.mb-0{margin-bottom:0}.mb-1{margin-bottom:8px}.mb-2{margin-bottom:14px}.mb-3{margin-bottom:22px}.mb-4{margin-bottom:32px}
+.site-footer{margin-top:46px;background:#0b1220;color:#e2e8f0;padding:28px 0}
+.footer-grid{display:grid;gap:20px}
+.footer-brand img{height:30px;width:auto}
+.footer-copy{text-align:center;font-size:.9rem;color:#a8b3c7;border-top:1px solid rgba(255,255,255,.08);margin-top:18px;padding-top:14px}
+.footer-nav ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.footer-nav a{color:#e2e8f0}
+.footer-nav a:hover{color:#fff}
+.socials{display:flex;gap:10px;margin-top:10px}
+.socials svg{width:28px;height:28px;fill:#e2e8f0}
+.socials a:hover svg{fill:#fff}
