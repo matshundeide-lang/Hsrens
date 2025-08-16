@@ -1,91 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ventilasjonsrens i Bergen & omegn | HS Rens & Vedlikehold</title>
-  <meta name="description" content="Profesjonell rens av ventilasjonskanaler, ventiler og avtrekk for bolig, borettslag og næring. Bedre luft, mindre støv og trygg drift.">
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HS Rens & Vedlikehold</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
-  <!-- HEADER (samme på alle sider) -->
   <header class="site-header">
-    <div class="container header-row">
-      <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold"></a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Meny"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <nav class="site-nav" id="site-nav">
-        <a aria-current="page" href="/">Ventilasjonsrens</a>
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="/ventilasjon/">Ventilasjonsrens</a>
         <a href="/varmepumperens/">Varmepumperens</a>
         <a href="/resultater/">Resultater</a>
         <a href="/om-oss/">Om oss</a>
         <a href="/kontakt-oss/">Kontakt oss</a>
-        <a class="cta-phone" href="tel:+4792098742">Ring: 92 09 87 42</a>
       </nav>
+      <div class="header-phone"><a href="tel:+4792098742">+47 92 09 87 42</a></div>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <p class="badge">Bergen & omegn</p>
-      <h1>Ventilasjonsrens for bolig, borettslag og næring</h1>
-      <p>Vi renser kanaler, ventiler og avtrekk skikkelig – for bedre luft, mindre støv og trygg drift. Alltid foto før/etter og tydelig rapport.</p>
-      <p><a class="btn" href="/kontakt-oss/">Få tilbud eller bestill</a></p>
-    </section>
-
-    <section class="container cards">
-      <article class="card">
-        <h2>Hva vi gjør</h2>
-        <ul>
-          <li>Rens av kanaler, ventiler og kjøkken/avtrekk</li>
-          <li>Måling av luftmengder og enkle justeringer</li>
-          <li>Filterbytte og anbefalinger for vedlikehold</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>Hvorfor rense?</h2>
-        <ul>
-          <li>Bedre inneluft og mindre støv</li>
-          <li>Tryggere og mer effektiv ventilasjon</li>
-          <li>Mindre lukt og støy fra anlegget</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>For borettslag & næring</h2>
-        <p>Vi tilbyr årlige serviceavtaler, faste priser og ryddig dokumentasjon. Ta kontakt for befaring.</p>
-      </article>
-    </section>
-
-    <section class="container">
-      <h2>Før–etter</h2>
-      <p>Se flere eksempler under <a href="/resultater/">Resultater</a>.</p>
-      <div class="gallery">
-        <!-- Bytt filnavnene til dine egne bilder i /images/ -->
-        <figure><img src="/images/for-01.jpg" alt="Før rens"><figcaption>Før</figcaption></figure>
-        <figure><img src="/images/etter-01.jpg" alt="Etter rens"><figcaption>Etter</figcaption></figure>
-        <figure><img src="/images/for-02.jpg" alt="Før rens"><figcaption>Før</figcaption></figure>
-        <figure><img src="/images/etter-02.jpg" alt="Etter rens"><figcaption>Etter</figcaption></figure>
+    <section class="hero">
+      <div class="container">
+        <span class="tag">Bergen & omegn</span>
+        <h1>Ventilasjonsrens for bolig, borettslag og næring</h1>
+        <p>Vi renser kanaler, ventiler og avtrekk skikkelig – for bedre luft, mindre støv og trygg drift. Alltid profesjonelt utført arbeid.</p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (samme på alle) -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>HS Rens & Vedlikehold</strong><br>
-        Rollandslia 221, 5115 Ulset
-      </div>
-      <div>
-        <a href="tel:+4792098742">+47 92 09 87 42</a><br>
-        <a href="mailto:post@hsrens.no">post@hsrens.no</a>
-      </div>
-      <div><a class="btn btn-small" href="/kontakt-oss/">Kontakt oss</a></div>
+    <div class="container">
+      <p><strong>HS Rens & Vedlikehold</strong><br>
+      Rollandslia 221, 5115 Ulset<br>
+      +47 92 09 87 42 · <a href="mailto:post@hsrens.no">post@hsrens.no</a></p>
     </div>
-    <div class="container small">© <span id="y"></span> HS Rens & Vedlikehold</div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
