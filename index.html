@@ -1,77 +1,91 @@
 <!doctype html>
 <html lang="no">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HS Rens & Vedlikehold – Ventilasjonsrens i Bergen</title>
-  <meta name="description" content="HS Rens & Vedlikehold: Profesjonell rens av ventilasjonsanlegg og varmepumper i Bergen og omegn. Serviceavtaler for borettslag og næring. Kampanje varmepumperens 1 399,-.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <style>
-    .hero   {padding:42px 16px; background:linear-gradient(180deg,#ecfeff,transparent)}
-    .badge  {display:inline-block; padding:6px 10px; border:1px solid #bff3f6; border-radius:999px; background:#f6ffff; color:#0b6c70; font-weight:700; font-size:13px}
-    .lead   {color:#475569; max-width:720px}
-    .features{display:grid; gap:10px; margin:14px 0}
-    @media(min-width:900px){ .features{grid-template-columns:repeat(3,1fr)} }
-    .feature{background:#fff;border-radius:12px;padding:14px;border:1px solid #e6eef4}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ventilasjonsrens i Bergen & omegn | HS Rens & Vedlikehold</title>
+  <meta name="description" content="Profesjonell rens av ventilasjonskanaler, ventiler og avtrekk for bolig, borettslag og næring. Bedre luft, mindre støv og trygg drift.">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER (samme på alle sider) -->
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
-    <nav class="site-nav">
-      <a href="/tjenester/">Ventilasjonsrens</a>
-      <a href="/varmepumperens/">Varmepumperens</a>
-      <a href="/resultater/">Resultater</a>
-      <a href="/om-oss/">Om oss</a>
-      <a href="/kontakt-oss/">Kontakt oss</a>
-    </nav>
-    <a class="cta-phone" href="tel:+4792098742">+47 92 09 87 42</a>
+    <div class="container header-row">
+      <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Meny"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a aria-current="page" href="/">Ventilasjonsrens</a>
+        <a href="/varmepumperens/">Varmepumperens</a>
+        <a href="/resultater/">Resultater</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakt-oss/">Kontakt oss</a>
+        <a class="cta-phone" href="tel:+4792098742">Ring: 92 09 87 42</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero – Ventilasjonsrens først -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge">Bergen & omegn</span>
+  <main>
+    <section class="hero container">
+      <p class="badge">Bergen & omegn</p>
       <h1>Ventilasjonsrens for bolig, borettslag og næring</h1>
-      <p class="lead">Vi renser kanaler, ventiler og avtrekk skikkelig – for bedre luft, mindre støv og trygg drift. Alltid før/etter-bilder.</p>
-      <p>
-        <a class="btn" href="/kontakt-oss/">Få tilbud</a>
-        <a class="btn btn-secondary" href="/tjenester/">Les om ventilasjonsrens</a>
-      </p>
+      <p>Vi renser kanaler, ventiler og avtrekk skikkelig – for bedre luft, mindre støv og trygg drift. Alltid foto før/etter og tydelig rapport.</p>
+      <p><a class="btn" href="/kontakt-oss/">Få tilbud eller bestill</a></p>
+    </section>
 
-      <div class="features">
-        <div class="feature"><strong>Dokumentasjon</strong><br>Før/etter-bilder for hvert oppdrag</div>
-        <div class="feature"><strong>Ryddig</strong><br>Tildekking, utsug og opprydding</div>
-        <div class="feature"><strong>Forutsigbart</strong><br>Klare tider og fast pris/tilbud</div>
+    <section class="container cards">
+      <article class="card">
+        <h2>Hva vi gjør</h2>
+        <ul>
+          <li>Rens av kanaler, ventiler og kjøkken/avtrekk</li>
+          <li>Måling av luftmengder og enkle justeringer</li>
+          <li>Filterbytte og anbefalinger for vedlikehold</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Hvorfor rense?</h2>
+        <ul>
+          <li>Bedre inneluft og mindre støv</li>
+          <li>Tryggere og mer effektiv ventilasjon</li>
+          <li>Mindre lukt og støy fra anlegget</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>For borettslag & næring</h2>
+        <p>Vi tilbyr årlige serviceavtaler, faste priser og ryddig dokumentasjon. Ta kontakt for befaring.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <h2>Før–etter</h2>
+      <p>Se flere eksempler under <a href="/resultater/">Resultater</a>.</p>
+      <div class="gallery">
+        <!-- Bytt filnavnene til dine egne bilder i /images/ -->
+        <figure><img src="/images/for-01.jpg" alt="Før rens"><figcaption>Før</figcaption></figure>
+        <figure><img src="/images/etter-01.jpg" alt="Etter rens"><figcaption>Etter</figcaption></figure>
+        <figure><img src="/images/for-02.jpg" alt="Før rens"><figcaption>Før</figcaption></figure>
+        <figure><img src="/images/etter-02.jpg" alt="Etter rens"><figcaption>Etter</figcaption></figure>
       </div>
-    </div>
-  </section>
-
-  <!-- Sekundær: Kampanje varmepumpe -->
-  <main class="container">
-    <section class="cards">
-      <article class="card">
-        <h2>Varmepumperens – kampanje</h2>
-        <p><strong>Kun 1 399,-</strong> inkl. mva for innedel. Renere luft, høyere effekt og mindre lukt.</p>
-        <p><a class="btn" href="/varmepumperens/">Se detaljer</a> <a class="btn btn-secondary" href="tel:+4792098742">Ring oss</a></p>
-      </article>
-
-      <article class="card">
-        <h2>Serviceavtaler</h2>
-        <p>Årlige serviceavtaler for <strong>borettslag, sameier og næring</strong>. Fast pris per enhet, plan og rapport hvert år.</p>
-        <p><a class="btn btn-secondary" href="/kontakt-oss/">Få tilbud</a></p>
-      </article>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER (samme på alle) -->
   <footer class="site-footer">
-    <div class="footer-brand">HS Rens & Vedlikehold</div>
-    <div>Rollandslia 221, 5115 Ulset</div>
-    <div><a href="tel:+4792098742">+47 92 09 87 42</a> • <a href="mailto:post@hsrens.no">post@hsrens.no</a></div>
+    <div class="container footer-grid">
+      <div>
+        <strong>HS Rens & Vedlikehold</strong><br>
+        Rollandslia 221, 5115 Ulset
+      </div>
+      <div>
+        <a href="tel:+4792098742">+47 92 09 87 42</a><br>
+        <a href="mailto:post@hsrens.no">post@hsrens.no</a>
+      </div>
+      <div><a class="btn btn-small" href="/kontakt-oss/">Kontakt oss</a></div>
+    </div>
+    <div class="container small">© <span id="y"></span> HS Rens & Vedlikehold</div>
   </footer>
 
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
