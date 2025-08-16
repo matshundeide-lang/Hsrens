@@ -1,60 +1,77 @@
 <!doctype html>
 <html lang="no">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rens av varmepumpe – HS Rens & Vedlikehold</title>
-  <meta name="description" content="Profesjonell rens av varmepumper. Kampanjepris 1 399,-. Årlige serviceavtaler for borettslag og næring.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Varmepumperens – kampanje 1399,- | HS Rens & Vedlikehold</title>
+  <meta name="description" content="Profesjonell rens av varmepumpe (innedel/utedel). Kampanjepris 1399,- i Bergen & omegn.">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
-
   <header class="site-header">
-    <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold logo" style="height:80px;max-height:100px;"></a>
-    <nav class="site-nav">
-      <a href="/tjenester/">Ventilasjonsrens</a>
-      <a aria-current="page" href="/varmepumperens/">Varmepumperens</a>
-      <a href="/resultater/">Resultater</a>
-      <a href="/om-oss/">Om oss</a>
-      <a href="/kontakt-oss/">Kontakt oss</a>
-    </nav>
-    <a class="cta-phone" href="tel:+4792098742">+47 92 09 87 42</a>
+    <div class="container header-row">
+      <a class="logo" href="/"><img src="/images/hs-02.png" alt="HS Rens & Vedlikehold"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Meny"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/">Ventilasjonsrens</a>
+        <a aria-current="page" href="/varmepumperens/">Varmepumperens</a>
+        <a href="/resultater/">Resultater</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakt-oss/">Kontakt oss</a>
+        <a class="cta-phone" href="tel:+4792098742">Ring: 92 09 87 42</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <h1>Varmepumperens</h1>
-    <p>Dyp rens av innedel (og utedel ved behov) gir bedre luft, høyere effekt og lavere strømforbruk.</p>
+  <main>
+    <section class="hero container">
+      <p class="badge">Kampanje</p>
+      <h1>Varmepumperens – <span style="white-space:nowrap">1399,-</span></h1>
+      <p>Skikkelig rens av innedel (og enkel sjekk av utedel) gir bedre effekt, lavere strømforbruk og renere luft.</p>
+      <p><a class="btn" href="/kontakt-oss/">Bestill rens</a></p>
+    </section>
 
-    <section class="cards">
-      <article class="card">
-        <h2>Kampanjepris</h2>
-        <p><strong>Innedel: 1 399,-</strong> inkl. mva</p>
-        <p class="muted">Gjelder standard boliginstallasjoner i Bergen og omegn.</p>
-        <p><a class="btn" href="tel:+4792098742">Bestill rens nå</a></p>
-      </article>
-
+    <section class="container cards">
       <article class="card">
         <h2>Dette gjør vi</h2>
-        <ul class="checklist">
-          <li>Skånsom, grundig vask av lameller og viftehjul</li>
-          <li>Rens av filter og kondensbakke</li>
-          <li>Funksjonstest og enkle råd om vedlikehold</li>
+        <ul>
+          <li>Full rens av innedel (vifte, lameller, dryppbakke)</li>
+          <li>Skånsom kjemi og grundig skyll</li>
+          <li>Kort funksjonstest og enkel sjekk av utedel</li>
         </ul>
       </article>
-
       <article class="card">
-        <h2>Serviceavtaler</h2>
-        <p>Årlige avtaler for <strong>borettslag, sameier og næring</strong> – fast pris per enhet og planlagt intervall.</p>
-        <p><a class="btn btn-secondary" href="/kontakt-oss/">Be om tilbud</a></p>
+        <h2>Fordeler</h2>
+        <ul>
+          <li>Mer effekt og jevnere varme/kjøling</li>
+          <li>Mindre lukt og bedre inneluft</li>
+          <li>Kan redusere strømforbruk</li>
+        </ul>
       </article>
+      <article class="card">
+        <h2>For borettslag</h2>
+        <p>Vi setter opp avtaler per oppgang/leilighet med fast pris og enkel booking.</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <h2>Før–etter</h2>
+      <div class="gallery">
+        <figure><img src="/images/for-vp-01.jpg" alt="Før rens"><figcaption>Før</figcaption></figure>
+        <figure><img src="/images/etter-vp-01.jpg" alt="Etter rens"><figcaption>Etter</figcaption></figure>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand">HS Rens & Vedlikehold</div>
-    <div>Rollandslia 221, 5115 Ulset</div>
-    <div><a href="tel:+4792098742">+47 92 09 87 42</a> • <a href="mailto:post@hsrens.no">post@hsrens.no</a></div>
+    <div class="container footer-grid">
+      <div><strong>HS Rens & Vedlikehold</strong><br>Rollandslia 221, 5115 Ulset</div>
+      <div><a href="tel:+4792098742">+47 92 09 87 42</a><br><a href="mailto:post@hsrens.no">post@hsrens.no</a></div>
+      <div><a class="btn btn-small" href="/kontakt-oss/">Kontakt oss</a></div>
+    </div>
+    <div class="container small">© <span id="y"></span> HS Rens & Vedlikehold</div>
   </footer>
-
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
