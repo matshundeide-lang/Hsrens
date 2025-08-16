@@ -1,32 +1,33 @@
 <!doctype html><html lang="no"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Resultater – Før/etter | HS Rens & Vedlikehold</title>
+<title>Kontakt oss – HS Rens & Vedlikehold</title>
 <link rel="stylesheet" href="/assets/css/styles.css">
 </head><body>
 <header class="header"><div class="container nav">
   <a class="brand" href="/"><img src="/images/logo.jpg" alt="HS Rens & Vedlikehold" class="brand-logo"><div><h1>HS Rens & Vedlikehold</h1><small>Ren luft • Bergen & omegn</small></div></a>
   <nav><button class="burger">☰</button><div class="menu" id="mainmenu">
-    <a href="/tjenester/">Tjenester</a><a href="/varmepumperens/">Varmepumperens</a><a href="/resultater/">Resultater</a><a href="/om-oss/">Om oss</a><a class="btn" href="/kontakt-oss/">Få tilbud</a>
+    <a href="/tjenester/">Tjenester</a><a href="/varmepumperens/">Varmepumperens</a><a href="/resultater/">Resultater</a><a href="/om-oss/">Om oss</a><a class="btn" href="/kontakt-oss/">Kontakt</a>
   </div></nav>
 </div></header>
 
 <main class="section light"><div class="container">
-  <p class="kicker">Før / Etter</p>
-  <h2>Resultater fra faktiske oppdrag</h2>
+  <h2>Kontakt oss</h2>
+  <p>Ring oss på <a href="tel:+4700000000">+47 00 00 00 00</a> eller send forespørsel via skjemaet.</p>
 
-  <div class="ba-grid mt-32">
-    <!-- Bytt ut filnavnene med dine egne i /images -->
-    <article class="ba-card"><img src="/images/fe-1-before.jpg" alt="Før rens"><img src="/images/fe-1-after.jpg" alt="Etter rens"><div class="cap">Kanalrens – før/etter</div></article>
-    <article class="ba-card"><img src="/images/fe-2-before.jpg" alt="Før rens"><img src="/images/fe-2-after.jpg" alt="Etter rens"><div class="cap">Kanalrens – før/etter</div></article>
-    <article class="ba-card"><img src="/images/fe-3-before.jpg" alt="Før rens"><img src="/images/fe-3-after.jpg" alt="Etter rens"><div class="cap">Varmepumpe – før/etter</div></article>
-  </div>
-
-  <p class="mt-24"><a class="btn" href="/kontakt-oss/">Be om pris</a></p>
+  <form class="card mt-24" name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="kontakt">
+    <p style="display:none"><label>Ikke fyll ut: <input name="bot-field"></label></p>
+    <label>Navn<br><input type="text" name="navn" required></label><br><br>
+    <label>E-post<br><input type="email" name="epost" required></label><br><br>
+    <label>Telefon<br><input type="tel" name="telefon"></label><br><br>
+    <label>Melding<br><textarea name="melding" rows="6" required></textarea></label><br><br>
+    <button class="btn" type="submit">Send forespørsel</button>
+  </form>
 </div></main>
 
 <footer class="footer"><div class="container cols">
   <div><h3>HS Rens & Vedlikehold</h3><p>Ekspert på ventilasjonsrens og varmepumperens.</p></div>
-  <div><h4>Navigasjon</h4><p><a href="/">Forside</a><br><a href="/tjenester/">Tjenester</a><br><a href="/kontakt-oss/">Kontakt oss</a></p></div>
+  <div><h4>Navigasjon</h4><p><a href="/">Forside</a><br><a href="/tjenester/">Tjenester</a><br><a href="/om-oss/">Om oss</a></p></div>
   <div><h4>Serviceområde</h4><p>Bergen og omegn</p></div>
 </div></footer>
 <script src="/assets/js/main.js" defer></script>
