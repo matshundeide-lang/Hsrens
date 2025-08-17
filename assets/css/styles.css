@@ -1,6 +1,5 @@
 /* =========================
-   HS Rens & Vedlikehold
-   Globalt stilark
+   HS Rens & Vedlikehold – globalt stilark
    ========================= */
 
 /* ---------- Variabler ---------- */
@@ -37,13 +36,14 @@ h1{font-size:clamp(28px,5vw,44px);line-height:1.15}
 h2{font-size:clamp(22px,3.6vw,32px)}
 h3{font-size:clamp(18px,3vw,22px)}
 p{margin:.6rem 0}
+
 .container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 .section{padding:48px 0}
 .section.alt{background:var(--bg-alt)}
+.pill{display:inline-block;background:var(--bg-alt);color:var(--brand-dark);border:1px solid var(--border);padding:.35rem .65rem;border-radius:999px;font-weight:600;margin-bottom:.6rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1rem;border-radius:12px;border:0;background:var(--brand);color:#fff;font-weight:800}
 .btn:hover{background:var(--brand-dark);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--brand);border:2px solid var(--brand)}
-.pill{display:inline-block;background:var(--bg-alt);color:var(--brand-dark);border:1px solid var(--border);padding:.35rem .65rem;border-radius:999px;font-weight:600;margin-bottom:.6rem}
 
 /* ---------- Header / navigasjon ---------- */
 .site-header{
@@ -57,7 +57,7 @@ p{margin:.6rem 0}
   display:flex;align-items:center;justify-content:space-between;
   min-height:70px;
 }
-.brand img{height:40px;width:auto}           /* litt større logo */
+.brand img{height:44px;width:auto}  /* logo-størrelse */
 .nav-toggle{
   display:none;appearance:none;background:none;border:0;cursor:pointer;
   width:42px;height:42px;border-radius:10px;position:relative;
@@ -82,7 +82,7 @@ p{margin:.6rem 0}
 
 /* Mobilmeny */
 @media (max-width:860px){
-  .brand img{height:36px}
+  .brand img{height:40px}
   .nav-toggle{display:block}
   .main-nav{
     position:fixed;inset:70px 0 0 0;background:#fff;transform:translateY(-100%);
